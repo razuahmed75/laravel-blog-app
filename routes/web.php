@@ -14,8 +14,8 @@ use App\Http\Controllers\HomeController;
 */
 
 
-Route::get('/home', [HomeController::class, 'Home']);
+Route::get('/home/{value1}/{value2}/{value3}', [HomeController::class, 'Home']);
 
-Route::get('/about', [HomeController::class, 'Home']);
+Route::get('/about', [HomeController::class, 'About']);
 
 Route::get('/contact', [HomeController::class, 'Contact']);
