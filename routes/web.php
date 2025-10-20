@@ -1,7 +1,6 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\HomeController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -14,8 +13,17 @@ use App\Http\Controllers\HomeController;
 */
 
 
-Route::get('/home/{value1}/{value2}/{value3}', [HomeController::class, 'Home']);
+Route::group(['prefix'=> 'profile'],function (){
 
-Route::get('/about', [HomeController::class, 'About']);
+    Route::get('/info',function(){
+        return 'Info page';
+    });
+    Route::get('/update',function(){
+        return 'Update page';
+    });
+    Route::get('/delete',function(){
+        return 'Delete page';
+    });
 
-Route::get('/contact', [HomeController::class, 'Contact']);
+});
+

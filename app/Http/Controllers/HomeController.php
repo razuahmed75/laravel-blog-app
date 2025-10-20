@@ -7,8 +7,7 @@ use Illuminate\Http\Request;
 class HomeController extends Controller
 {
     function Home($value1, $value2, $value3){
-        // return view('home');
-        return 'This value is: ' .$value1 .' ' .$value2 .' ' .$value3;
+        return view('home',['first'=>$value1, 'second'=>$value2, 'third'=>$value3]);
     }
 
     function About(){
