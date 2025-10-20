@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\SingleController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -13,6 +14,11 @@ use Illuminate\Support\Facades\Route;
 */
 
 
+// single controller
+Route::get('/single', SingleController::class);
+
+
+// grouping controller
 Route::group(['prefix'=> 'profile'],function (){
 
     Route::get('/info',function(){
